@@ -1,1 +1,1 @@
-current state
+duplicate line
