@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# This script displays the time for 12 hours and 59 minutes
+
+hour=0
+while [ $hour -lt 13 ]
+do
+  minute=1
+  while [ $minute -lt 60 ]
+  do
+    printf "%02d:%02d\n" $hour $minute
+    minute=$((minute+1))
+  done
+  hour=$((hour+1))
+done | head -n 70
+
+# The printf command is used to format the output with leading zeros for single digit hours and minutes. The script uses two nested while loops to iterate over the hours and minutes, and outputs the time in 24-hour format. The output is then piped to the head command to display only the first 70 lines.
